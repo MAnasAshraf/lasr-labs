@@ -1,0 +1,19 @@
+# My Process
+
+**Reading the brief:** I read the whole doc first, since it says to, and Part 3 changed how I built Part 1. Knowing I'd have to explain AI's role afterward meant I built the worked example so you could actually see what the AI got right, what it got wrong, and what I caught, instead of cleaning that up and just presenting a finished answer.
+
+**Choosing the topic:** I came up with four candidate topics and tested each one against what the brief actually says: the cohort is fluent but not systematic, and the named gap is calibration, not general AI skill. Literature synthesis won because it targets that gap directly, it helps every fellow regardless of their specific research topic, and it produces something concrete they take home, not just advice. That reasoning is in [[Case for Choice]].
+
+**Choosing Obsidian over a plain template, or a notebook:** once I'd picked literature synthesis, I considered how the output should be stored. A Jupyter-style notebook was a poor fit, notebooks are built for executable code, and this workflow produces claims and relationships between claims, not computation. A linked-notes tool fits the actual shape of the problem: each paper is a node, and the value comes from how it connects to other papers a fellow reads over 13 weeks, not from any single note in isolation. I kept the underlying format as plain markdown with YAML frontmatter, so it works with Obsidian specifically, or with any similar tool, or with no tool at all if a fellow just wants flat files.
+
+**Where AI did the work:** I used AI to pull the three real papers' abstracts from arXiv, and to generate the actual first-pass extraction using the Extract prompt exactly as a fellow would run it. That extraction is genuine model output against real text, not something I wrote to look like a mistake.
+
+**Where I added the value:** picking which three papers to use, and specifically choosing one theoretical paper, one about capability scaling, and one about LLM training, so they'd need real synthesis instead of just being stacked together, was my call. The bigger thing: finding the two verification catches meant actually reading each abstract closely enough to notice where the AI's summary had quietly dropped a condition or mixed up two terms. Asking AI to check its own summary wouldn't reliably catch this, since both passes come from the same blind spot. I had to go back to the source text myself, which is the exact habit the workshop is trying to teach. I also wrote the session structure, the opening hook (show the mistake, let the room miss it, then explain the pattern), and the case for why this topic beats the alternatives for this cohort.
+
+**Tools used:** Claude, for pulling the real abstracts, generating the raw first-pass extraction as genuine unedited output, and helping draft the write-up. The judgment calls, picking the topic, the structure of the session, the decision to frame the output as vault notes rather than a flat document, which errors to build the demo around, and catching those errors myself, were mine, based on reading the actual papers rather than trusting a second AI pass to check the first.
+
+**Assumptions I made, flagged since they matter:**
+- I assumed LASR teams start their projects with a literature review phase early in the 13 weeks, based on how the brief describes the fellowship. That's what makes the "week one" urgency argument hold.
+- I assumed the 30 minutes run as one continuous session, not split up.
+- I assumed at least some fellows already use a linked-notes tool (Obsidian or similar) given their technical background, and built the workflow so it works either way, whether or not that's true for a given fellow.
+- The worked example's topic, reward hacking in RL-trained LLMs, is a plausible general AI safety question, not tailored to any specific incoming fellow's actual project, since I don't know what the real cohort is working on.
